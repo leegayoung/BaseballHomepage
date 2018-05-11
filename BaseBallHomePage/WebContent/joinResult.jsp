@@ -8,5 +8,16 @@
 </head>
 <body>
 
+<%
+	String str = request.getParameter("result");
+
+	if(str.equals("ok")){
+		out.println("회원가입에 성공하셨습니다.");
+	}else{
+		out.println("일시적인 오류로 회원가입에 실패했습니다. 잠시후 다시 시도 해주세요.");
+	}
+%>
+
+<meta http-equiv = 'refresh' content='5; url=Main.jsp'>
 </body>
 </html>
